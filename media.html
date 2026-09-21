@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calcular média</h2>
+
+    <input id="num1" type="number" placeholder="Digite o primeiro número">
+    <input id="num2" type="number" placeholder="Digite o segundo número">
+    <button onclick="media()">Calcular Média</button>
+
+    <p>Resultado: <span id="resultado"></span></p>
+
+    <script>
+        function media(){
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let n2 = parseFloat(document.getElementById("num2").value);
+            let resultado = (n1 + n2) / 2;
+            if (resultado >=6) {
+                let resposta = "Aprovado";
+                document.getElementById("resultado").innerHTML = resultado + " - " + resposta;
+            } else {
+                let resposta = "Reprovado";
+                document.getElementById("resultado").innerHTML = resultado + " - " + resposta;
+            }
+        }
+    </script>
+</body>
+</html>

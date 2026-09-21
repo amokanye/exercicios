@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1-Antecessor</h2>
+
+    <input id="num" type="number" placeholder="Digite um número">
+    <button onclick="antecessor()">Calcular antecessor</button>
+    
+     <p>Resultado: <span id="resultado"></span></p>
+    
+    <script>
+        function antecessor(){
+           let n1 = parseFloat(document.getElementById("num").value);
+           let resultado = n1 - 1
+           document.getElementById("resultado").innerHTML = resultado;
+        
+        }
+
+    </script>
+
+    <h2>2-Área do retângulo</h2>
+
+    <input id="base" type="number" placeholder="Digite o valor da base">
+    <input id="altura" type="number" placeholder="Digite o valor da altura">
+    <button onclick="area()">Calcular área</button>
+
+    <p>Resultado: <span id="resultado2"></span></p>
+
+    <script>
+        function area(){
+            let base = parseFloat(document.getElementById("base").value);
+            let altura = parseFloat(document.getElementById("altura").value);
+            let resultado = (base * altura);
+            document.getElementById("resultado2").innerHTML = resultado;
+
+        }
+
+    </script>
+
+    <h2>3-Eleitores</h2>
+
+    <input id="total" type="number" placeholder="Total">
+    <input id="brancos" type="number" placeholder="brancos">
+    <input id="nulos" type="number" placeholder="nulos">
+    <input id="validos" type="number" placeholder="válidos">
+    <button onclick="porcentagem()">Calcular porcentagem</button>
+    
+    <p> Percentual: <span id="percentual"></span></p>
+
+
+    <script>
+        function porcentagem(){
+            let total = parseInt(document.getElementById("total").value)
+            let brancos = parseInt(document.getElementById("brancos").value)
+            let nulos = parseInt(document.getElementById("nulos").value)
+            let validos = parseInt(document.getElementById("validos").value)
+            
+            let pbrancos = (brancos / total) * 100;
+            let pnulos = (nulos / total) * 100;
+            let pvalidos = (validos / total) * 100;
+
+            document.getElementById("percentual").innerHTML = 
+            "Percentual de votos brancos: " + pbrancos.tofixed(2) + "%<br>" +
+            "Percentual de votos nulos: " + pnulos.tofixed(2) + "%<br>" +
+            "Percentual de votos válidos: " + pvalidos.tofixed(2) + "%<br>" 
+        }
+    </script>
+
+
+
+
+    <h2>4-Porcentagem salário</h2>
+
+    <input id="salario" type="number" placeholder="Digite o valor do salário">
+    <input id="porcentagem" type="number" placeholder="Digite a porcentagem">
+    <button onclick="Acrescentar()">Acrescentar</button>
+
+    <p>Novo salário: <span id="novoSalario"></span></p>
+
+    <script>
+        function Acrescentar() {
+            let salario = parseFloat(document.getElementById("salario").value)
+            let porcentagem = parseFloat(document.getElementById("porcentagem").value)
+            let acreSalarioNovo = (salario / 100) * (porcentagem)
+            let salarioNovo = (salario) + (acreSalarioNovo)
+            document.getElementById("novoSalario").innerHTML = "R$" + salarioNovo;
+        }
+    </script>
+
+    <h2>5 - Custo do carro</h2>
+    Custo de fábrica: <input type="number" id="custo">
+    <button onclick="custoFinal()">Calcular</button>
+    <p id="carro"></p>  
+
+    <script>
+        function custoFinal() {
+            let custo = parseFloat(document.getElementById("custo").value);
+            let distribuidor = custo * 0.28;
+            let impostos = custo * 0.45;
+            let final = custo + distribuidor + impostos;
+            document.getElementById("carro").innerText = "Custo final: R$ " + final.toFixed(2)
+        }
+    </script>
+
+    <h2>6- Salário do vendedor</h2>
+    Carros vendidos: <input type="number" id="carros"><br>
+    Valor total vendas: <input type="nnumber" id="vendas"><br>
+    Salário fixo: <input type="number" id="fixo"><br>
+    Comissão por carro: <input type="number" id="comissao"><br>
+    <button onclick="salarioVendedor()">Calcular</button>
+    <p id="salarioV"></p>
+
+
+
+
+    
+
+</body>
+</html>

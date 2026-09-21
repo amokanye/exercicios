@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="txt.n1" type="number" placeholder="Digite apenas número.">
+    <input id="txt.n2" type="number" placeholder="Digite apenas número.">
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+    <p>Resultado: <span id="resultado"></span></p>
+     <script>
+        function somar(){
+
+            let num1 = parseFloat(document.getElementById("txt.n1").value);
+            let num2 = parseFloat(document.getElementById("txt.n2").value);
+
+            let soma = num1 + num2;
+
+            document.getElementById("resultado").innerHTML = soma;
+
+        }
+
+        function subtrair(){
+
+            let num1 = parseFloat(document.getElementById("txt.n1").value);
+            let num2 = parseFloat(document.getElementById("txt.n2").value);
+
+            let soma = num1 - num2;
+
+            document.getElementById("resultado").innerHTML = soma;
+
+        }
+
+        function multiplicar(){
+
+            let num1 = parseFloat(document.getElementById("txt.n1").value);
+            let num2 = parseFloat(document.getElementById("txt.n2").value);
+
+            let soma = num1 * num2;
+
+            document.getElementById("resultado").innerHTML = soma;
+
+        }
+
+        function dividir(){
+
+            let num1 = parseFloat(document.getElementById("txt.n1").value);
+            let num2 = parseFloat(document.getElementById("txt.n2").value);
+
+            let soma = num1 / num2;
+
+            document.getElementById("resultado").innerHTML = soma;
+
+        }
+
+
+     </script>
+
+</body>
+</html>
